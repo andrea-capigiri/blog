@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+    <meta charset="utf-8" />
+    <title>{{ .Site.Title }}</title>
+    <link rel="canonical" href="{{ .Permalink }}" />
+
+    {{ partial "meta.html" . }}
+    {{ partial "head_includes.html" . }}
+
+    {{ $sitetitle := .Site.Title }}
+    {{ with .OutputFormats.Get "RSS" }}
+    <link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ $sitetitle }}" />
+    {{ end }}
+</head>
+<body>
+    <main id="container">
+        {{ partial "header.html" . }}
+        <div>
+            <ul id="list" class="pl0">
+                <!-- prettier-ignore -->
+                {{ range .Data.Pages.ByDate.Reverse }}
+                <li class="list pl0 lh-copy">
+                    <a class="f3 b dib black no-underline" href="{{ .Permalink}}">{{ .Title }}</a>
+                    <span class="f6 gray db dib-ns">{{ .Date.Format "January 2, 2006" }}</span>
+                </li>
+                <!-- prettier-ignore -->
+                {{ end }}
+            </ul>
+        </div>
+        {{ partial "footer.html" . }}
+    </main>
+</body>
+</html>

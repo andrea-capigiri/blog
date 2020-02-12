@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+    <meta charset="utf-8" />
+    <title>{{ .Site.Title }}</title>
+    <link rel="canonical" href="{{ .Permalink }}" />
+
+    {{ partial "meta.html" . }}
+    {{ partial "head_includes.html" . }}
+
+    {{ $sitetitle := .Site.Title }}
+    {{ with .OutputFormats.Get "RSS" }}
+        <link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ $sitetitle }}" />
+    {{ end }}
+</head>
+<body>
+    <main id="container">
+        {{ partial "header.html" . }}
+        <article id="content">
+            {{ .Content }}
+        </article>
+        {{ partial "footer.html" . }}
+    </main>
+</body>
+</html>

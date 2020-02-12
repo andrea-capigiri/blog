@@ -1,0 +1,4 @@
+
+html, body { font: 'Open Sans', sans-serif; box-sizing: border-box; }
+main#container { padding: 3rem; margin: 0 auto; max-width: 60rem; border: 1rem solid #41758d; background-color: #FFF; }
+
