@@ -1,3 +1,27 @@
 title = "Andrea Capigiri"
 baseURL = "https://andreacapigiri.com/"
 languageCode = "it"
+
+[[menu.main]]
+    identifier  = "home"
+    name        = "Home"
+    url         = "/"
+    weight      = -1
+
+[[menu.main]]
+    identifier  = "projects"
+    name        = "Progetti"
+    url         = "/projects/"
+    weight      = 1
+
+[[menu.main]]
+    identifier  = "blog"
+    name        = "Blog"
+    url         = "/blog/"
+    weight      = 2
+
+[[menu.main]]
+    identifier  = "about-me"
+    name        = "About"
+    url         = "/about-me/"
+    weight      = 3

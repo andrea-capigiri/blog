@@ -17,6 +17,7 @@
     <main id="container">
         {{ partial "header.html" . }}
         <article id="content">
+            {{ partial "nav.html" . }}
             {{ .Content }}
         </article>
         {{ partial "footer.html" . }}

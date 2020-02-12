@@ -1,4 +1,10 @@
 
-html, body { font: 'Open Sans', sans-serif; box-sizing: border-box; }
+html, body { font-family: 'Oswald', sans-serif; box-sizing: border-box; }
 main#container { padding: 3rem; margin: 0 auto; max-width: 60rem; border: 1rem solid #41758d; background-color: #FFF; }
 
+nav {  }
+nav a { display: inline-block; padding:4px 0; margin-right: 12px; }
+
+/*
+#f58e84
+*/

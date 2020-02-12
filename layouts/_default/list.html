@@ -17,6 +17,7 @@
     <main id="container">
         {{ partial "header.html" . }}
         <div>
+            {{ partial "nav.html" . }}
             <ul id="list" class="pl0">
                 <!-- prettier-ignore -->
                 {{ range .Data.Pages.ByDate.Reverse }}
